@@ -60,4 +60,10 @@ def download_github_file(url):
     else:
         print(name," already exists.")
 
+def create_empty(name):
+    if not os.path.exists(name):
+        open(name, "x")
+    else:
+        print(name," already exists.")
+
 

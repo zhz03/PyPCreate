@@ -4,6 +4,7 @@ from pypcreate.utils import load_yaml
 from pypcreate.utils import create_files
 from pypcreate.utils import create_a_file
 from pypcreate.utils import download_github_file
+from pypcreate.utils import create_empty
 
 def mkdir(dir_name):
     if not os.path.exists(dir_name):
@@ -41,9 +42,9 @@ def mk_subdir(directory,parent_path):
                 mk_subdir(directory[item],dir_name) 
 
 def setpyp():
-    open('setup.py', "x")
-    open('environment.yml', "x")
-    open('MANIFEST.in', "x")
+    create_empty('setup.py')
+    create_empty('environment.yml')
+    create_empty('MANIFEST.in')
     
 def pyptemp():
     MANIFEST_url = 'https://raw.githubusercontent.com/zhz03/PyPCreate/main/pysetup_template/MANIFEST.in'
