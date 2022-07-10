@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from setuptools import setup, find_packages
-import mistgen
+import pypcreate
 
 with open("README.md", "r", encoding='utf-8') as fh:
     long_description = fh.read()
@@ -8,6 +8,8 @@ with open("README.md", "r", encoding='utf-8') as fh:
 setup(
     name="pypcreate",
     version=pypcreate.__version__,
+    packages=find_packages(),
+    package_data={"":["*.yaml","*.pyx"]},
     author="Zhaoliang Zheng",
     author_email="zhz03@g.ucla.edu",
     description="Python Package creation tool",
@@ -15,9 +17,8 @@ setup(
     long_description_content_type="text/markdown",
     license="GNU GENERAL PUBLIC LICENSE V3",
     url="https://github.com/zhz03/PyPCreate",
-    packages=find_packages(),
     install_requires=[
-        "numpy"
+        "argparse"
         ],
     classifiers=[
         "Topic :: Software Development :: Libraries :: Python Modules",
