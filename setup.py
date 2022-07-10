@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-from setuptools import setup, find_packages
+from os.path import dirname, realpath
+from setuptools import setup, find_packages, Distribution
 import pypcreate
 
 with open("README.md", "r", encoding='utf-8') as fh:
@@ -9,7 +10,7 @@ setup(
     name="pypcreate",
     version=pypcreate.__version__,
     packages=find_packages(),
-    package_data={"":["*.yaml","*.pyx"]},
+    package_data={"":["*.yaml"]},
     author="Zhaoliang Zheng",
     author_email="zhz03@g.ucla.edu",
     description="Python Package creation tool",
@@ -18,7 +19,8 @@ setup(
     license="GNU GENERAL PUBLIC LICENSE V3",
     url="https://github.com/zhz03/PyPCreate",
     install_requires=[
-        "argparse"
+        "argparse",
+        "pyyaml"
         ],
     classifiers=[
         "Topic :: Software Development :: Libraries :: Python Modules",
