@@ -1,6 +1,7 @@
 import yaml
 import os
 import re
+import requests
 
 def load_yaml(file, opt=None):
     """
@@ -49,5 +50,14 @@ def create_a_file(file_path):
         open(file_path, "x")
     else:
         print(file_path," already exists.")
+
+def download_github_file(url):
+    name = url.split('/')[-1]
+    if not os.path.exists(name):
+        r = requests.get(url, stream=True)
+        f = open(name,'wb')
+        f.write(r.content)
+    else:
+        print(name," already exists.")
 
 
