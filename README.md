@@ -1,6 +1,6 @@
 # PyPCreate
 
-Pypcreate is a easy to use Python package creation tool.
+Pypcreate is a easy-to-use Python package creation tool.
 
 ## Installation
 
