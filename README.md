@@ -54,3 +54,27 @@ Notes:
 - For the directory name, the variable name should be `dir_name`
 - For creating files, the variable name should be `files`
 
+### 3 setpyp
+
+To create all empty setup files: `setup.py`, `MANIFEST.in`, `environment.yml` :
+
+```
+pycreate --setpyp
+```
+
+### 4 pyptemp
+
+To download all setup files to current directory: `setup.py`, `MANIFEST.in`, `environment.yml` :
+
+```
+pycreate --pyptemp
+```
+
+### 5 inittemp
+
+To download `__init__.py` template:
+
+```
+pycreate --inittemp
+```
+

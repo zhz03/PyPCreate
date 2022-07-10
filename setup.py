@@ -20,7 +20,8 @@ setup(
     url="https://github.com/zhz03/PyPCreate",
     install_requires=[
         "argparse",
-        "pyyaml"
+        "pyyaml",
+        "requests"
         ],
     classifiers=[
         "Topic :: Software Development :: Libraries :: Python Modules",
