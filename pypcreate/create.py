@@ -1,8 +1,8 @@
 import os
 import argparse
 from pypcreate.__init__ import __version__
-from pypcreate.pypcreate import mkdir
-from pypcreate.pypcreate import mkdir_from_yaml
+from pypcreate.create_func import mkdir
+from pypcreate.create_func import mkdir_from_yaml
 
 def test_parser():
     parser = argparse.ArgumentParser(description="opencood command")
@@ -28,7 +28,7 @@ def main():
         print("pypcreate version:",__version__)
 
     if opt.mkdir != 'None':
-        mkdir(opt.pmkdir)
+        mkdir(opt.mkdir)
     
     if opt.yamlmkdir != 'None':
         mkdir_from_yaml(opt.yamlmkdir)

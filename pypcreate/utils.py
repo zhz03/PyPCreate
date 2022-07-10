@@ -50,17 +50,4 @@ def create_a_file(file_path):
     else:
         print(file_path," already exists.")
 
-def mk_subdir(directory,parent_path):
-    dir_key = list(directory.keys())
-    for item in dir_key:
-        if item == 'dir_name':  
-            dir_name = directory['dir_name']
-            mkdir(dir_name)
-        elif item == 'files':
-            create_files(dir_name,directory['files'])
-        else:
-            if parent_path == 'root':
-                mk_subdir(directory[item],'None')   
-            else:
-                directory[item]['dir_name'] = os.path.join(dir_name,directory[item]['dir_name'])
-                mk_subdir(directory[item],dir_name) 
+
