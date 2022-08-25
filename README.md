@@ -78,3 +78,11 @@ To download `__init__.py` template:
 pycreate --inittemp
 ```
 
+## 6 mkdocs_temp
+
+To download mkdocs template zip file:
+
+```bash
+pypcreate --mkdocs_temp
+```
+

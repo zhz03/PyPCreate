@@ -61,7 +61,7 @@ def inittemp():
 
 def mkdocs_temp():
     url = 'https://github.com/zhz03/mkdocs_sample/blob/main/mkdocs_sample.zip?raw=true'
-    download_github_zip(url,remove_zip)
+    download_github_zip(url)
 
 if __name__ == '__main__':
     inittemp()
