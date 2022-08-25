@@ -68,6 +68,7 @@ def download_github_zip(url):
     if not os.path.exists(name):
         r = requests.get(url, stream=True)
         f = open(name,'wb')
+        f.write(r.content)
     else:
         print(name," already exists.")
     
