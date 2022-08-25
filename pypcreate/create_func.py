@@ -5,6 +5,7 @@ from pypcreate.utils import create_files
 from pypcreate.utils import create_a_file
 from pypcreate.utils import download_github_file
 from pypcreate.utils import create_empty
+from pypcreate.utils import download_github_zip
 
 def mkdir(dir_name):
     if not os.path.exists(dir_name):
@@ -57,6 +58,10 @@ def pyptemp():
 def inittemp():
     init_url = 'https://raw.githubusercontent.com/zhz03/PyPCreate/main/pysetup_template/__init__.py'
     download_github_file(init_url)
+
+def mkdoc_temp():
+    url = 'https://github.com/zhz03/mkdocs_sample/blob/main/mkdocs_sample.zip?raw=true'
+    download_github_zip(url,remove_zip)
 
 if __name__ == '__main__':
     inittemp()

@@ -60,6 +60,30 @@ def download_github_file(url):
     else:
         print(name," already exists.")
 
+def download_github_zip(url):
+    # example: url = 'https://github.com/zhz03/mkdocs_sample/blob/main/mkdocs_sample.zip?raw=true'
+
+    name = url.split('/')[-1].split('?')[0]
+
+    if not os.path.exists(name):
+        r = requests.get(url, stream=True)
+        f = open(name,'wb')
+    else:
+        print(name," already exists.")
+    
+    # To do: unzip and remove the zip file
+    """
+    with ZipFile(name, 'r') as zipObj:
+       # Extract all the contents of zip file in current directory
+       zipObj.extractall()
+       print("INFO: Google file has been unzipped!")
+
+    if remove_zip==True:
+        if os.path.exists(outputPath):
+            os.remove(outputPath)
+            print("INFO: Download zip has been removed!")
+    """
+
 def create_empty(name):
     if not os.path.exists(name):
         open(name, "x")

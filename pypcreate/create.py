@@ -6,6 +6,7 @@ from pypcreate.create_func import mkdir_from_yaml
 from pypcreate.create_func import setpyp
 from pypcreate.create_func import pyptemp
 from pypcreate.create_func import inittemp
+from pypcreate.create_func import mkdocs_temp
 
 def test_parser():
     parser = argparse.ArgumentParser(description="opencood command")
@@ -29,6 +30,9 @@ def test_parser():
 
     parser.add_argument('--inittemp', action='store_true',
                         help="To download '__init__.py' template ")
+
+    parser.add_argument('--mkdocs_temp', action='store_true',
+                        help="To download mkdocs template ")
   
     opt = parser.parse_args()
     return opt
@@ -53,6 +57,9 @@ def main():
 
     if opt.inittemp:
         inittemp()
+    
+    if opt.mkdocs_temp:
+        mkdocstemp()
     
 if __name__ == '__main__':
     main()
