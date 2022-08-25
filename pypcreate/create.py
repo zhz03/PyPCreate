@@ -59,7 +59,7 @@ def main():
         inittemp()
     
     if opt.mkdocs_temp:
-        mkdocstemp()
+        mkdocs_temp()
     
 if __name__ == '__main__':
     main()

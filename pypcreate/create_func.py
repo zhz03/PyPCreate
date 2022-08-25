@@ -59,7 +59,7 @@ def inittemp():
     init_url = 'https://raw.githubusercontent.com/zhz03/PyPCreate/main/pysetup_template/__init__.py'
     download_github_file(init_url)
 
-def mkdoc_temp():
+def mkdocs_temp():
     url = 'https://github.com/zhz03/mkdocs_sample/blob/main/mkdocs_sample.zip?raw=true'
     download_github_zip(url,remove_zip)
 
